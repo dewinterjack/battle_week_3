@@ -1,3 +1,13 @@
 {
-  "ruby.rubocop.configFilePath": "/Users/jd/makers/battle/.rubocop.yml"
+  "editor.insertSpaces": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  // Defines where the Ruby extension will look to find Modules, Classes and methods.
+  "ruby.locate": {
+    "exclude": "{**/@(test|spec|tmp|liv|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+    "include": "**/*.rb"
+  },
 }
