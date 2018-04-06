@@ -1,4 +1,4 @@
-require './lib/app'
+require './app'
 
 run Battle
 
