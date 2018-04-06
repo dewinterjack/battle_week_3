@@ -8,14 +8,15 @@ class Battle < Sinatra::Base
 	end
 
 	post '/names' do
-		@player1 = params[:player1]
-		@player2 = params[:player2]
-		session['p1test'] = params[:player1]
-		erb :play
+		session['player1'] = params[:player1]
+		session['player2'] = params[:player2]
+		redirect to('/play')
 	end
 
-	get '/sesh' do
-		"p1 = " << session[:p1test].inspect
+	get '/play' do
+		@player1 = session[:player1]
+		@player2 = session[:player2]
+		erb :play
 	end
 
 	run! if app_file == $0
